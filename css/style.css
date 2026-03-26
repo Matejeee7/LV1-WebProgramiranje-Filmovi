@@ -1,8 +1,6 @@
-/* Osnovni reset i varijable */
-
 :root {
     --primary-color: #c7194d;
-    --secondary-color: #5500f4a1;
+    --secondary-color: #6f3cff;
     --background-color: #f8f6f3;
     --surface-color: #ffffff;
     --text-color: #222222;
@@ -13,14 +11,12 @@
     --max-width: 1200px;
 }
 
-/* Resetira zadane margine i paddinge preglednika */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Osnovne postavke cijele stranice */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--background-color);
@@ -28,13 +24,16 @@ body {
     line-height: 1.6;
 }
 
-/* Header */
-
 .site-header {
     background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
     color: white;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 2.5rem 1rem;
+}
+
+.header-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
 }
 
 .site-header h1 {
@@ -45,8 +44,6 @@ body {
 .site-header p {
     font-size: 1.1rem;
 }
-
-/* Skrivena navigacija */
 
 .nav-wrapper {
     position: relative;
@@ -101,15 +98,15 @@ body {
 }
 
 .main-nav a:hover {
-    color: var(--secondary-color);
+    color: #ffe082;
 }
 
-.nav-wrapper:hover .main-nav {
+.nav-wrapper:hover .main-nav,
+.main-nav:hover {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
-/* Glavni raspored */
 
 .page-layout {
     max-width: var(--max-width);
@@ -129,25 +126,22 @@ body {
     padding: 1.5rem;
 }
 
-/* Uvodni tekst i naslov */
-
-.intro {
+.intro,
+.movie-table-section,
+.info-section,
+.news-article {
     margin-bottom: 2rem;
 }
 
 .intro h2,
 .movie-table-section h2,
-.sidebar h2 {
+.info-section h2,
+.news-article h2,
+.sidebar h2,
+.sidebar h3 {
     margin-bottom: 1rem;
     color: var(--primary-color);
 }
-
-.intro p,
-.sidebar p {
-    margin-bottom: 1rem;
-}
-
-/* Tablica */
 
 .table-wrapper {
     overflow-x: auto;
@@ -189,8 +183,6 @@ tr:hover {
     transition: background-color 0.3s ease;
 }
 
-/* Aside i slika */
-
 .sidebar picture,
 .sidebar img {
     width: 100%;
@@ -198,34 +190,33 @@ tr:hover {
     object-fit: cover;
     border-radius: 10px;
     box-shadow: var(--shadow);
-    opacity: 0.92;
-    transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
 }
 
 .sidebar img {
-    border-radius: var(--radius);
-    opacity: 0.95;
-    transition: transform 0.3s ease, opacity 0.3s ease;
     margin-bottom: 1rem;
+    transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
 }
 
 .sidebar img:hover {
-    transform: scale(1.04);
+    transform: scale(1.03);
     opacity: 1;
     filter: brightness(1.05);
 }
 
-/* Button */
+.sidebar p {
+    margin-bottom: 1rem;
+}
 
 .more-btn {
     display: inline-block;
     background-color: var(--primary-color);
-    color: #222;
+    color: white;
     text-decoration: none;
     font-weight: bold;
     padding: 0.8rem 1.2rem;
     border-radius: 8px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 1.5rem;
 }
 
 .more-btn:hover {
@@ -233,7 +224,29 @@ tr:hover {
     transform: translateY(-2px);
 }
 
-/* Footer */
+.sidebar-card {
+    background-color: #f6f2ff;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.sidebar-links {
+    list-style: none;
+}
+
+.sidebar-links li + li {
+    margin-top: 0.6rem;
+}
+
+.sidebar-links a {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.sidebar-links a:hover {
+    text-decoration: underline;
+}
 
 .site-footer {
     margin-top: 2rem;
@@ -242,8 +255,6 @@ tr:hover {
     text-align: center;
     padding: 1rem;
 }
-
-/* Responzivni dizajn */
 
 @media (max-width: 900px) {
     .page-layout {

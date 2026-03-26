@@ -1,111 +1,111 @@
 <!DOCTYPE html>
-	<html lang="hr">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!--dodati meta tag bitan za stranicu-->
-		<meta name="description" content="Ovo je web stranica za filmove">
-		<!--dodati link za css dokumente -->
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="css/style_slike.css">
-		<title>Filmovi Web</title> 
-	</head>
-	<body>
-		<header>
-		<h1>Dobrodošli web stranicu za filmove</h1>
-		</header>
-		</head>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web stranica o filmovima s tablicom, galerijom slika i CSS vizualizacijom podataka.">
+    <title>Filmovi Web | Početna</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
-
     <header class="site-header">
-        <h1>Filmovi Web</h1>
-        <p>Pregled odabranih filmova i njihovih osnovnih informacija</p>
+        <div class="header-inner">
+            <h1>Filmovi Web</h1>
+            <p>Pregled odabranih filmova, galerija postera i vizualizacija podataka</p>
+        </div>
     </header>
 
     <div class="nav-wrapper">
-    <button class="menu-toggle" aria-label="Prikaži navigaciju">☰ Menu</button>
+        <button class="menu-toggle" aria-label="Prikaži navigaciju">☰ Menu</button>
+        <nav class="main-nav" aria-label="Glavna navigacija">
+            <ul>
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="html/grafikon.html">Grafikon</a></li>
+                <li><a href="html/slike.html">Galerija</a></li>
+            </ul>
+        </nav>
+    </div>
 
-    <nav class="main-nav" aria-label="Glavna navigacija">
-        <ul>
-            <li><a href="index.html">Početna</a></li>
-            <li><a href="html/grafikon.html">Grafikon</a></li>
-            <li><a href="html/slike.html">Galerija</a></li>
-        </ul>
-    </nav>
-</div>
+    <div class="page-layout">
+        <main class="main-content">
+            <section class="intro" aria-labelledby="uvod-naslov">
+                <h2 id="uvod-naslov">O projektu</h2>
+                <p>Ova stranica prikazuje odabrane filmske naslove kroz tablični prikaz, galeriju filmskih postera i vizualizaciju podataka izrađenu samo pomoću HTML-a i CSS-a.</p>
+            </section>
 
-		<div class="container">
-			<main>
-				<h1>Popis Filmova</h1>
+            <section class="movie-table-section" aria-labelledby="tablica-naslov">
+                <h2 id="tablica-naslov">Popis filmova</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <caption>Odabrani filmovi s osnovnim informacijama</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Naslov</th>
+                                <th scope="col">Godina</th>
+                                <th scope="col">Žanr</th>
+                                <th scope="col">Trajanje</th>
+                                <th scope="col">Država</th>
+                                <th scope="col">Ocjena</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>2</td><td>Bugs Bunny's Third Movie</td><td>1982</td><td>Animacija</td><td>76</td><td>SAD</td><td>7.7</td></tr>
+                            <tr><td>3</td><td>18 anni tra una settimana</td><td>1991</td><td>Drama</td><td>98</td><td>Italija</td><td>6.5</td></tr>
+                            <tr><td>17</td><td>Ride a Wild Pony</td><td>1976</td><td>Romantični</td><td>91</td><td>SAD</td><td>5.7</td></tr>
+                            <tr><td>18</td><td>Diner</td><td>1982</td><td>Komedija</td><td>95</td><td>SAD</td><td>7.0</td></tr>
+                            <tr><td>20</td><td>A che servone questi quattrini?</td><td>1942</td><td>Komedija</td><td>85</td><td>Italija</td><td>5.9</td></tr>
+                            <tr><td>22</td><td>A ciascuno il suo</td><td>1967</td><td>Drama</td><td>93</td><td>Italija</td><td>7.6</td></tr>
+                            <tr><td>23</td><td>Dead-Bang</td><td>1989</td><td>Krimić</td><td>109</td><td>SAD</td><td>6.0</td></tr>
+                            <tr><td>24</td><td>A... come assassino</td><td>1966</td><td>Triler</td><td>80</td><td>Italija</td><td>5.2</td></tr>
+                            <tr><td>26</td><td>At Close Range</td><td>1986</td><td>Drama</td><td>115</td><td>SAD</td><td>7.5</td></tr>
+                            <tr><td>30</td><td>A Ghentar si muore facile</td><td>1968</td><td>Avantura</td><td>101</td><td>Italija</td><td>4.8</td></tr>
+                            <tr><td>32</td><td>Sleeping with the Enemy</td><td>1990</td><td>Drama</td><td>96</td><td>SAD</td><td>5.0</td></tr>
+                            <tr><td>34</td><td>In Bed With Madonna</td><td>1990</td><td>Dokumentarni</td><td>111</td><td>SAD</td><td>5.3</td></tr>
+                            <tr><td>36</td><td>Bowery at Midnight</td><td>1942</td><td>Horor</td><td>62</td><td>SAD</td><td>5.1</td></tr>
+                            <tr><td>37</td><td>A mezzanotte va la ronda del piacere</td><td>1975</td><td>Komedija</td><td>100</td><td>Italija</td><td>5.8</td></tr>
+                            <tr><td>38</td><td>Mr. Majestyk</td><td>1974</td><td>Akcija</td><td>105</td><td>SAD</td><td>6.2</td></tr>
+                            <tr><td>45</td><td>Warning Sign</td><td>1985</td><td>Akcija</td><td>99</td><td>SAD</td><td>4.8</td></tr>
+                            <tr><td>47</td><td>About Last Night</td><td>1986</td><td>Komedija</td><td>113</td><td>SAD</td><td>5.9</td></tr>
+                            <tr><td>49</td><td>Fail-Safe</td><td>1964</td><td>Drama</td><td>110</td><td>SAD</td><td>8.2</td></tr>
+                            <tr><td>51</td><td>Some Like It Hot</td><td>1959</td><td>Komedija</td><td>120</td><td>SAD</td><td>9.1</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
-				<div class="table-div">
-					<table>
-						<tr>
-							<th>ID</th>
-							<th>Naslov</th>
-							<th>Godina</th>
-							<th>Žanr</th>
-							<th>Trajanje</th>
-							<th>Država</th>
-							<th>Ocjena</th>
-						</tr>
-						<tr><td>2</td><td>Bugs Bunny's Third Movie</td><td>1982</td><td>Animacija</td><td>76</td><td>SAD</td><td>7.7</td></tr>
-						<tr><td>3</td><td>18 anni tra una settimana</td><td>1991</td><td>Drama</td><td>98</td><td>Italija</td><td>6.5</td></tr>
-						<tr><td>17</td><td>Ride a Wild Pony</td><td>1976</td><td>Romantični</td><td>91</td><td>SAD</td><td>5.7</td></tr>
-						<tr><td>18</td><td>Diner</td><td>1982</td><td>Komedija</td><td>95</td><td>SAD</td><td>7.0</td></tr>
-						<tr><td>20</td><td>A che servono questi quattrini?</td><td>1942</td><td>Komedija</td><td>85</td><td>Italija</td><td>5.9</td></tr>
-						<tr><td>22</td><td>A ciascuno il suo</td><td>1967</td><td>Drama</td><td>93</td><td>Italija</td><td>7.6</td></tr>
-						<tr><td>23</td><td>Dead-Bang</td><td>1989</td><td>Krimić</td><td>109</td><td>SAD</td><td>6.0</td></tr>
-						<tr><td>24</td><td>A... come assassino</td><td>1966</td><td>Triler</td><td>80</td><td>Italija</td><td>5.2</td></tr>
-						<tr><td>26</td><td>At Close Range</td><td>1986</td><td>Drama</td><td>115</td><td>SAD</td><td>7.5</td></tr>
-						<tr><td>30</td><td>A Ghentar si muore facile</td><td>1968</td><td>Avantura</td><td>101</td><td>Italija</td><td>4.8</td></tr>
-						<tr><td>32</td><td>Sleeping with the Enemy</td><td>1990</td><td>Drama</td><td>96</td><td>SAD</td><td>5.0</td></tr>
-						<tr><td>34</td><td>In Bed With Madonna</td><td>1990</td><td>Dokumentarni</td><td>111</td><td>SAD</td><td>5.3</td></tr>
-						<tr><td>36</td><td>Bowery at Midnight</td><td>1942</td><td>Horor</td><td>62</td><td>SAD</td><td>5.1</td></tr>
-						<tr><td>37</td><td>A mezzanotte va la ronda del piacere</td><td>1975</td><td>Komedija</td><td>100</td><td>Italija</td><td>5.8</td></tr>
-						<tr><td>38</td><td>Mr. Majestyk</td><td>1974</td><td>Akcija</td><td>105</td><td>SAD</td><td>6.2</td></tr>
-						<tr><td>45</td><td>Warning Sign</td><td>1985</td><td>Akcija</td><td>99</td><td>SAD</td><td>4.8</td></tr>
-						<tr><td>47</td><td>About Last Night</td><td>1986</td><td>Komedija</td><td>113</td><td>SAD</td><td>5.9</td></tr>
-						<tr><td>49</td><td>Fail-Safe</td><td>1964</td><td>Drama</td><td>110</td><td>SAD</td><td>8.2</td></tr>
-						<tr><td>51</td><td>Some Like It Hot</td><td>1959</td><td>Komedija</td><td>120</td><td>SAD</td><td>9.1</td></tr>
-					</table>
-				</div>
-				
-			</main>
+            <section class="info-section" aria-labelledby="seo-naslov">
+                <h2 id="seo-naslov">Struktura i sadržaj</h2>
+                <p>Dokument koristi semantičke HTML elemente kako bi sadržaj bio pregledniji, responzivan i pristupačniji korisnicima na različitim uređajima.</p>
+            </section>
 
-			<aside class="sidebar" aria-label="Dodatni sadržaj o filmovima">
+            <article class="news-article" aria-labelledby="novosti-naslov">
+                <h2 id="novosti-naslov">Izdvojeno</h2>
+                <p>Poseban naglasak stavljen je na preglednost tablice, prikaz galerije postera i grafički pregled zastupljenosti filmskih žanrova.</p>
+            </article>
+        </main>
+
+        <aside class="sidebar" aria-label="Dodatni sadržaj o filmovima">
             <h2>Izdvojeni vizuali</h2>
-
             <picture>
                 <source media="(max-width: 568px)" srcset="images/cinema.jpg">
-                <img src="images/cinema.jpg"
-                     alt="Ilustracija filmske tematike stranice">
+                <img src="images/cinema.jpg" alt="Ilustracija filmske tematike stranice">
             </picture>
-
-            <p>
-                Fotografija se prilagođava veličini ekrana kako bi stranica bila responzivna
-                i pregledna na mobilnim i desktop uređajima.
-            </p>
-
+            <p>Galerija donosi stilizirane filmske postere, a stranica s grafikonima prikazuje odnos žanrova iz tablice filmova.</p>
             <a class="more-btn" href="html/slike.html">Pogledaj galeriju</a>
+
+            <div class="sidebar-card">
+                <h3>Brza navigacija</h3>
+                <ul class="sidebar-links">
+                    <li><a href="html/grafikon.html">Prikaži grafikon</a></li>
+                    <li><a href="html/slike.html">Otvori galeriju</a></li>
+                </ul>
+            </div>
         </aside>
-		</div>
+    </div>
 
-		<section> <!-- dodati neke od obilježja za ARIA-->
-			<h2>Ovo je glavna sekcija</h2>
-			<p>HTML5 omogucava semanticku strukturu koja poboljsava pristupacnost i SEO.</p>
-		</section>
-		 <!-- dodati jedan aside na desnoj strani s ugrađenom google mapom/filmom ili slično-->
-		<article>
-			<h2>Najnovije vijesti</h2>
-			<p>Ovdje se nalazi clanak s vaznim informacijama o novim filmovima.</p>
-		</article>
-		
-
-		<!--dodati odgovarajuće elemente na temelju danog zadatka: tablice, slike, tekst
-		Nepotrebno obrisati! -->
-		 <footer class="site-footer">
+    <footer class="site-footer">
         <p>&copy; 2026 Filmovi Web | Web programiranje</p>
     </footer>
-	</body>
-	</html>
+</body>
+</html>
